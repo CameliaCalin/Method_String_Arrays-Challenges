@@ -13,16 +13,12 @@ public class PrintNonAlphabetCharacters {
 
             // access each character using charAt()
             char x = text.charAt(i);
+            x = Character.toLowerCase(x); // Conversia caracterului la minuscule
 
-            // check if the string falls in the range from 'a' to 'z' or 'A' to 'Z'
-            // hint: use >= 'a' and <= 'z' for both cases
-            if ((x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z')) {
-
-                // if true, skip the current iteration of loop
+            if ((x >= 'a' && x <= 'z')) {
                 continue;
             }
 
-            // print x if it doesn't fall in the range
             System.out.println(x);
         }
 
